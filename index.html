@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8"/>
         <title>Reservia, trouvez votre hebergement pour des vacances de rêves</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap" rel="stylesheet">   
+        <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -16,8 +19,6 @@
                     <li><a href="">Activités</a></li>
                     <li><a href="">S'inscrire</a></li>
                 </ul>
-               
-
             </nav>
         </header>
 
@@ -27,9 +28,11 @@
 
 
             <div id="recherche">
-                <label for="search">Recherchez sur la page</label>
-                <input type="search" id="" name="" placeholder="Marseille, France">
-                <input type="submit">
+                <label for="search"><img src="images\icons\map-marker-alt-solid.svg"></label>
+                <input type="search" id="searchtext" name="" placeholder="Marseille, France">
+                <button id="searchbtn">
+                    <span >Rechercher</span>
+                </button>
             </div>
 
             <div id="filtres">
