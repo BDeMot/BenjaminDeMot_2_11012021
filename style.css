@@ -1,10 +1,41 @@
 body{
     font-family: 'Raleway', sans-serif;
+    margin: 8px 0 0 0;
 }
 
-#wrapper{ width: 94%;
-    margin : 0 3% 0 3%;
+#wrapper{ 
+    width: 92%;
+    margin: auto;
 }
+
+h1, h2{
+    font-size: 1.35em;
+}
+
+
+/****couleurs des étoiles******/
+
+.blue{  
+    color: #0065FC;;
+}
+
+.grey{
+    color: lightgrey;
+}
+
+
+/************animation des articles***********/
+
+article:hover, figure:hover{
+    transform:scale(1.02);
+}
+    
+article, figure{
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+
 
 /**************header style***************/
 
@@ -13,7 +44,6 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 90px;
-
 }
 
 header nav{
@@ -28,79 +58,95 @@ header ul{
     justify-content: space-between;
     align-items: center;
     margin: 0%;
+    height: 90px;
 }
 
 header ul li{
     list-style-type: none;
     font-size: 1em;
-    border-top : 2px solid black;
-    height: 100%;
+    border-top : 2px solid white;
+    line-height: 90px;
+    width: 33%;
+    min-width: 113px;
+    text-align: center;
+    position: relative;
+    bottom: 8px;
+    cursor: pointer;
+    
 }
 
 header ul li a{
     text-decoration: none;
-  
+   /* display: inline-block;*/
+    height: 100%;
+    color: black;
    
 }
+
+nav li:hover  {
+    border-top:2px solid #0065FC;
+}
+
+nav li:hover a{
+    color: #0065FC;
+}
+
+header li:last-child a {
+    color: #0065FC;
+    font-weight: bold;
+}
+
 
  /*************recherche**********/
 
 #recherche{
-    height: 48px;
-    width: 400px;
-    white-space: nowrap;    
-    border : 1px solid #F2F2F2;
-    border-radius : 15px 0 0 15px;
-    background-color: #F2F2F2;
-}
-
+    display: flex;
+    flex-direction: row;
+  }
+  
 #searchicon{
-    display: inline-block;
-    width: 50px;
-    
-}
+    border-radius: 15px 0 0 15px;
+    background-color: #F2F2F2;
+    height: 50px;
+    width: 50px;    
+  }
+
 
 #recherche img{
-    height: 20px;
-    position: relative;
-    left: 20px;
-}
-
+      height: 20px;
+      position: relative;
+      left: 20px;
+      top: 13px;
+  }
+  
 #searchbtn{
-    display: inline-block;
-    height: 50px;
-    width: 130px;
-    background-color: #0065FC;
-    color: white;
-    border : none;
-    border-radius : 0 15px 15px 0;
-    cursor : pointer;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-    padding: 0;
-    position: relative;
-    right: 4px;
-   bottom: 1px;
-}
-
-
+      display: inline-block;
+      height: 50px;
+      width: 130px;
+      background-color: #0065FC;
+      color: white;
+      border : none;
+      border-radius : 0 15px 15px 0;
+      cursor : pointer;
+      font-size: 16px;
+      font-family: 'Raleway', sans-serif;
+      padding: 0;
+     }
+  
+  
 #searchtext{
-    height: 48px;
-    width: 238px;
-    border: none;
-    padding-left: 15px;
-    border: 1px solid #F2F2F2;
-    position: relative;
-    bottom: 2px;
-}
-
+      height: 50px;
+      width: 238px;
+      padding: 0 0 0 15px;
+      border: 1px solid #F2F2F2;
+      font-size: 16px;
+  }
 
 
 #searchtext::placeholder{
     font-size: 16px;
-    font-weight: bold;
     color: black;
+    font-weight: bold;
 }
 
 
@@ -112,65 +158,96 @@ header ul li a{
     flex-flow: row;
     align-items: baseline;
     font-weight: bolder;
-    height: 50px;
-    margin: 30px 0 30px 0;
+}
+
+#divfilters label{
+    margin-right: 26px;
+
 }
 
 #listfilters{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     width: 80%;
     padding: 0;
     height: 100%;
     list-style-type: none;
+    margin: 32px 0 42px 0;
 }
 
 .filter{
-    height: 55px;
+    height: 50px;
     border: 3px solid #F2F2F2;
     border-radius: 30px;
-    width: 197px;
     text-align: center;
-    line-height: 49px;
+    line-height: 50px;
     cursor: pointer;
+    padding-left: 23px;
+    padding-right: 23px;
+    margin-right: 26px;
 }
 
 #cbfilter{
-    /*display: none;*/
     margin: 0;
     padding: 0;
 }
 
 
 .filterlogo{
-    float: left;
-    width : 55px;
-    height: 55px;
+   display: inline-block;
+    width : 51px;
+    height: 51px;
     border-radius : 50% 50%;
     background-color:  #DEEBFF;
-}
-
-.filterlogo svg{
-    height:20px;
-    fill: #0065FC;
     position: relative;
-    top: 5px;
+    right: 24px;
+    
 }
 
-#cbfilter:checked .filter{
-    background-color:  #DEEBFF;
+.filterlogo i{
+    color: #0065FC;
 }
 
-#cbfilter:checked .filterlogo{
+.filter:hover {
+    background-color: #F2F2F2;  
+}
+
+.filter:hover .filterlogo{
     float: right;
+    right: -24px;
 }
 
-#infos{
-    margin: 50px;
+
+/***************info***********/
+ 
+#info{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 42px;
 }
-/**************section hébergements**************/
+
+.fa-info{
+    border: 2px solid lightgrey;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    bottom: 5px;
+    color: #0065FC;
+    margin-right: 5px;
+}
+
+.fa-info::before{
+  position: relative;
+  top:4px;
+  left: 9px;
+  font-weight: 600;
+}
+
+
+/*section hébergements*/
 
 #hebergements{
     display: flex;
@@ -185,23 +262,22 @@ header ul li a{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 70%;
+    width: 65%;
     background-color: #F2F2F2;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 #sectionPrincipale h2{
-    width: 100%;
-    padding: 20px;
+    width: 93%;
+    margin: 45px 0 0 0;
 }
 
 
 #hebergements aside{
-  
-    width: 27%;
+    width: 32%;
     align-items: center;
     background-color: #F2F2F2;
-    border-radius: 15px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -209,36 +285,53 @@ header ul li a{
 
 #affichezplus{
     width: 100%;
-    margin-left: 40px;
-    margin-bottom: 40px;
+    margin: 40px 0 50px 70px;
 }
 
 
-/******************cards section principale************/
+/*cards section principale*/
 
 .cards{
-    width: 300px;
-    height: 250px;
-    border-radius: 15px;
+    width: 280px;
+    height: 200px;
+    border-radius: 25px;
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
     margin: 20px;
-    border: 5px solid white;
+    border: 7px solid white;
 }
 
 .imgcaption{
-    height: 95px;
-    width: 302px;
+    height: 60px;
+    width: 265px;
     justify-content: end;
     background-color: white;
     position: relative;
-    top: 140px;
-    right: 1px;
-}
-
-.imgcaption p{
+    top: 125px;
+    right: 2px;
+    border-radius: 0 0 23px 23px;
     padding: 10px;
 }
+.imgcaption p{
+    margin:0;
+   line-height: 1.5em;
+}
+
+.imgcaption h3{
+    margin:0;
+}
+.cards i{
+    height: 10px;
+}
+
+.blue{
+    color: #0065FC;;
+}
+
+.grey{
+    color: lightgrey;
+}
+
 
 /*background cards section principale*/
 
@@ -249,48 +342,87 @@ header ul li a{
 
 #port{
     background-image: url('images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+    background-position: -3px -35px;
+    
 }
 
 #mouettes{
     background-image: url("images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+    background-position-y: -40px;
 }
 
 #mer{
     background-image: url("images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+    background-position-y: -65px;
 }
 
 #panier{
     background-image: url("images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+    background-position-y: -40px;
 }
 
 #amina{
     background-image: url("images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+    background-position-y: -150px;
 }
 
 
 /*************aside cards********/
+#headeraside{
+    display: flexbox;
+    align-content: space-between;
+    width: 80%;
+    align-items: baseline;
+}
+
+#headeraside h2{
+    margin: 45px 0 0 0;
+
+}
+
 .asidecards{
-    width: 350px;
+    width: 80%;
     height: 160px;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
-    border-radius: 15px;
-    border : 5px solid white;
+    border-radius: 25px;
+    border : 7px solid white;
     background-size: cover;
 }
 
+.caption{
+    background-color: white;
+    height: 130px;
+    width: 50%;
+    float: right;
+    border-radius: 0px 25px 25px 0;
+    position: relative;
+    bottom: 3px;
+    left: 3px;
+    padding: 20px 20px 20px 20px;
+}
 
+.caption h3{
+    margin: 0 0 10px 0;
+}
 
 #matin{
     background-image: url("images/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+    background-position-x: -50px;
+    background-size: contain;
 }
 
 #eau{
     background-image: url("images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg");
+    background-size: contain;
+    background-position-x: -40px;
 }
 
 #bleu{
     background-image: url("images/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+    background-size: 165px;
+    background-position-y: -20px;
+
 }
 
 /****************activités******************/
@@ -303,25 +435,39 @@ header ul li a{
     margin-top: 20px;
 }
 
+
 #activites h2{
     width: 100%;
-    padding: 20px;
+   padding-bottom: 20px;
 }
 
 .gdeimg{
     width: 22%;
     height: 450px;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
-    
-  
 }
+.gdeimg figcaption{
+    background-color: white;
+
+    height: 35px;
+    position: relative;
+    top: 402px;
+    border-radius: 0 0 25px 25px;
+}
+
+#activites figcaption{
+    margin: 0;
+    padding: 15px 0 0 20px;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
 
 #activites figure{
     margin: 0;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
-    cursor: pointer;
 }
 
 .petiteimg{
@@ -334,67 +480,99 @@ header ul li a{
 
 #vieuxport{
     background-image: url("images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
+    background-position-x: -160px;
 }
+
 
 #pomegues{
     background-image: url("images/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
     height: 60%;
-   
+    background-position-y: -130px;
+}
+
+#pomegues figcaption{
+    background-color: white;
+    height: 35px;
+    position: relative;
+    top: 222px;
+    border-radius: 0 0 25px 25px;
 }
 
 #frioul{
     background-image: url("images/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
     height: 30%;
+    background-position-y: -58px;
+    background-size: cover;
     
+}
+
+#frioul figcaption{
+    background-color: white;
+    height: 35px;
+    position: relative;
+    top: 86px;
+    border-radius: 0 0 25px 25px;
 }
 
 #calanques{
     background-image: url("images/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
+    background-position-x: -150px;
 }
 
+
 #garde{
-background-image: url("images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg");
-height: 45%;
+    background-image: url("images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg");
+    height: 45%;
+    background-size: cover;
+}
+
+#garde figcaption, #longchamp figcaption{
+    background-color: white;
+    height: 35px;
+    position: relative;
+    top: 154px;
+    border-radius: 0 0 25px 25px;
 }
 
 #longchamp{
-background-image: url("images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
-height: 45%;
+    background-image: url("images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
+    height: 45%;
+    background-size: cover;
 }
 
-figure:hover{
-        opacity: 1;
-        -webkit-animation: flash 1.5s;
-        animation: flash 1.5s;
-}
-    
-@keyframes flash {
-    0% {
-        opacity: .4;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-    
 
-     
+
+  
 
 /**************footer**********/
 footer{
     display: flex;
     background-color: #F2F2F2; 
-    margin-top: 40px;
+    margin-top: 70px;
+}
+
+footer h3{
+    margin: 0;
 }
 
 footer div{
-    margin-right: 250px;
+    margin: 52px 150px 0 70px;
 }
 
 footer ul{
     padding: 0;
+    line-height: 1.7em;
 }
+
 footer li{
     list-style: none;
-   
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    color : #0065FC;
 }
