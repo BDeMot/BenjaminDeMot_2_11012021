@@ -1,118 +1,24 @@
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-}
-
-#wrapper{ 
-    width: 92%;
-    margin: auto;
-}
-
-h1, h2{
-    font-size: 1.35em;
-}
-
-@media screen and (max-width: 1244px){
-    #hebergements{
-        flex-direction: column-reverse;
-    }
-
-    #sectionPrincipale{
-        width: 100%;
-    }
-
-    aside{
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-    }
-
-    .asidecards{
-        margin: 20px;
-        width: 330px;
-        margin: auto;
-        margin-bottom: 20px;
-
-    }
-
-    #headeraside{
-        margin: auto;
-        width: 100%;
-        padding: 0 20px 0 20px;
-    }
-
-    #activites figcaption{
-        font-size: .8em;
-    }
-}
-
-
-@media screen and (min-width: 1244px){
-    #hebergements{
-        flex-direction: row;
-    }
-
-    #sectionPrincipale{
-        width: 65%;
-    }
-
-    aside{
-        width: 32%;
-        flex-direction: column;
-    }
-    
-    .asidecards{
-        margin: auto;
-        width: 80%;
-    }
-
-    #headeraside{
-        display: flex;
-        width: 80%;
-    }
-
-    #activites figcaption{
-        font-size: 1.17em;
-    }
-    
-}
-
-
-/****couleurs des étoiles******/
-
-.blue{  
-    color: #0065FC;;
-}
-
-.grey{
-    color: lightgrey;
-}
-
-
-/************animation des articles***********/
-
-article:hover, figure:hover{
-    transform:scale(1.02);
-}
-    
-article, figure{
-    transition: all 0.2s ease;
-    cursor: pointer;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 
 
-/**************header style***************/
+
+#logo{
+    height: 110px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
 
 header{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 90px;
-}
-
-header nav{
-    height: 100%;
     
 }
 
@@ -120,19 +26,20 @@ header ul{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0%;
+    align-content: stretch;
+    margin: 0 0 100px 0;
+    padding: 0;
     height: 90px;
 }
 
 header ul li{
     list-style-type: none;
-    border-top : 2px solid white;
+    border-bottom : 8px solid lightgrey;
     line-height: 90px;
-    min-width: 113px;
+    width: 50%;
     text-align: center;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 header ul li a{
@@ -142,11 +49,19 @@ header ul li a{
 }
 
 nav li:hover  {
-    border-top:2px solid #0065FC;
+    border-bottom: 8px solid #0065FC;
 }
 
 nav li:hover a{
     color: #0065FC;
+}
+
+nav li:last-child{
+    border: none;
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    text-align: end;
 }
 
 header li:last-child a {
@@ -154,83 +69,96 @@ header li:last-child a {
     font-weight: bold;
 }
 
+/******************/
+section{
+    width: 80%;
+    margin: auto;
+}
+
+h1{
+    font-size: 50px;
+}
+
+p{
+    font-size: 33px;
+}
 
  /*************recherche**********/
 
-#recherche{
+ #recherche{
     display: flex;
     flex-direction: row;
+    margin-top: 100px;
   }
   
 #searchicon{
-    border-radius: 15px 0 0 15px;
+    border-radius: 25px 0 0 25px;
     background-color: #F2F2F2;
-    height: 50px;
-    width: 50px;    
+    height: 130px;
+    width: 15%;    
   }
 
 
 #recherche img{
-      height: 20px;
+      height: 50px;
       position: relative;
-      left: 20px;
-      top: 13px;
+      left: 50px;
+      top: 30px;
   }
   
 #searchbtn{
       display: inline-block;
-      height: 50px;
-      width: 130px;
+      height: 130px;
+      width: 15%;
       background-color: #0065FC;
       color: white;
       border : none;
-      border-radius : 0 15px 15px 0;
+      border-radius : 25px 25px 25px 25px;
       cursor : pointer;
       font-size: 16px;
       font-family: 'Raleway', sans-serif;
       padding: 0;
+      position: relative;
+      right: 17px;
      }
   
-     #searchbtn i{
-         display: none;
-     }
+#searchbtn span{
+    display: none;
+}
   
 #searchtext{
-      height: 50px;
-      width: 238px;
-      padding: 0 0 0 15px;
-      border: 1px solid #F2F2F2;
-      font-size: 16px;
+      height: 130px;
+      width: 70%;
+      padding: 0 0 0 35px;
+      border: 3px solid #F2F2F2;
+      font-size: 45px;
   }
 
 
 #searchtext::placeholder{
-    font-size: 16px;
+    font-size: 45px;
     color: black;
     font-weight: bold;
 }
-
-
 
 /*************filtres*************/
 
 #divfilters{
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: baseline;
     font-weight: bolder;
+    margin-top: 100px;
 }
 
 #divfilters label{
-    margin-right: 26px;
-
+    font-size: 45px;
 }
-
 #listfilters{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    width: 80%;
+    justify-content: space-between;
     padding: 0;
     height: 100%;
     list-style-type: none;
@@ -238,15 +166,17 @@ header li:last-child a {
 }
 
 .filter{
-    height: 50px;
-    border: 3px solid #F2F2F2;
-    border-radius: 30px;
+    height: 100px;
+    border: 6px solid #F2F2F2;
+    border-radius:  100px;
     text-align: center;
-    line-height: 50px;
+    line-height: 100px;
     cursor: pointer;
     padding-left: 23px;
     padding-right: 23px;
-    margin-right: 26px;
+    margin-top : 50px;
+    font-size: 40px;
+    
 }
 
 #cbfilter{
@@ -257,8 +187,8 @@ header li:last-child a {
 
 .filterlogo{
    display: inline-block;
-    width : 51px;
-    height: 51px;
+    width : 101px;
+    height: 101px;
     border-radius : 50% 50%;
     background-color:  #DEEBFF;
     position: relative;
@@ -279,7 +209,6 @@ header li:last-child a {
     right: -24px;
 }
 
-
 /***************info***********/
  
 #info{
@@ -292,8 +221,8 @@ header li:last-child a {
 .fa-info{
     border: 2px solid lightgrey;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     position: relative;
     bottom: 5px;
     color: #0065FC;
@@ -302,77 +231,76 @@ header li:last-child a {
 
 .fa-info::before{
   position: relative;
-  top:4px;
-  left: 9px;
- 
+  top:5px;
+  left: 16px;
+  
 }
-
 
 /*section hébergements*/
 
 #hebergements{
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 80%;
+    
 }
 
 #sectionPrincipale{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #F2F2F2;
-    border-radius: 25px;
+    
+    
 }
 
-
-
 #sectionPrincipale h2{
-   width: 93%;
+    width: 93%;
     margin: 45px 0 0 0;
 }
 
 
 #hebergements aside{
-    min-width: 395px;
+    width: 100%;
     align-items: center;
     background-color: #F2F2F2;
-    border-radius: 25px;
     display: flex;
-    
-    align-content: space-around;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 50px 0 50px 0;
+
 }
 
 #affichezplus{
-    width: 100%;
-    margin: 40px 0 50px 70px;
+    width: 80%;
+    margin: 40px 0 50px 0;
 }
 
 
 /*cards section principale*/
 
 .cards{
-    width: 280px;
-    height: 200px;
+    width: 100%;
+    height: 360px;
     border-radius: 25px;
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
-    margin: 20px;
-    border: 7px solid white;
+    margin: auto;
+    border: 10px solid white;
+    margin-bottom: 50px;
 }
 
 .imgcaption{
-    height: 60px;
-    width: 265px;
+    height: 44%;
+    width: 100%;
     justify-content: end;
     background-color: white;
     position: relative;
-    top: 125px;
-    right: 2px;
+    top: 210px;
     border-radius: 0 0 23px 23px;
-    padding: 10px;
 }
+
 .imgcaption p{
     margin:0;
    line-height: 1.5em;
@@ -398,42 +326,43 @@ header li:last-child a {
 
 #cannebiere{
     background-image: url("images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-    background-position: -40px -40px; 
+    background-position: -40px -170px; 
 }
 
 #port{
     background-image: url('images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
-    background-position: -3px -35px;
+    background-position: 15px -180px;
     
 }
 
 #mouettes{
     background-image: url("images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-    background-position-y: -40px;
+    background-position-y: -200px;
 }
 
 #mer{
     background-image: url("images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-    background-position-y: -65px;
+    background-position-y: -280px;
 }
 
 #panier{
     background-image: url("images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-    background-position-y: -40px;
+    background-position-y: -130px;
 }
 
 #amina{
     background-image: url("images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-    background-position-y: -150px;
+    background-position-y: -520px;
 }
 
 
 /*************aside cards********/
 #headeraside{
-    
-    align-content: space-between;
-    
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
     align-items: baseline;
+    margin-bottom: 40px;
 }
 
 #headeraside h2{
@@ -442,22 +371,24 @@ header li:last-child a {
 }
 
 .asidecards{
-    
-    height: 160px;
+    width: 80%;
+    height: 360px;
+    margin: auto;
     box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
     border-radius: 25px;
-    border : 7px solid white;
-    
+    border : 10px solid white;
+    background-size: cover;
+    margin-bottom: 50px;
 }
 
 .caption{
     background-color: white;
-    height: 130px;
+    height: 330px;
     width: 50%;
     float: right;
     border-radius: 0px 25px 25px 0;
     position: relative;
-    bottom: 3px;
+    bottom: 4px;
     left: 3px;
     padding: 20px 20px 20px 20px;
 }
@@ -480,7 +411,7 @@ header li:last-child a {
 
 #bleu{
     background-image: url("images/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-    background-size: 165px;
+    background-size: 355px;
     background-position-y: -20px;
 
 }
@@ -489,126 +420,89 @@ header li:last-child a {
 
 #activites{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
 }
 
+figure{
+    width: 100%;
+    height: 450px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
+    margin: auto;
+    margin-bottom: 50px;
+}
 
 #activites h2{
     width: 100%;
    padding-bottom: 20px;
 }
 
-.gdeimg{
-    width: 22%;
-    height: 450px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
-}
-.gdeimg figcaption{
-    background-color: white;
-
-    height: 35px;
-    position: relative;
-    top: 402px;
-    border-radius: 0 0 25px 25px;
-}
 
 #activites figcaption{
+    background-color: white;
+    height: 100px;
+    width: 96.25%;
+    position: relative;
+    top: 322px;
+    right: 1px;
+    border-radius: 0 0 25px 25px;
     margin: 0;
-    padding: 15px 0 0 20px;
-    
+    padding: 32px 0 0 32px;
+    font-size: 1.17em;
     font-weight: bold;
 }
 
 
-#activites figure{
-    margin: 0;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
-}
-
-.petiteimg{
-    display: flex;
-    flex-direction: column;
-    width: 22%;
-    justify-content: space-between;
-    
-}
-
 #vieuxport{
     background-image: url("images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
-    background-position-x: -160px;
+    background-size:cover;
 }
 
 
 #pomegues{
     background-image: url("images/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
-    height: 60%;
-    background-position-y: -130px;
+    background-size: cover;
+    background-position-y: -430px;
 }
 
-#pomegues figcaption{
-    background-color: white;
-    height: 35px;
-    position: relative;
-    top: 222px;
-    border-radius: 0 0 25px 25px;
-}
+
 
 #frioul{
     background-image: url("images/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
-    height: 30%;
     background-position-y: -58px;
     background-size: cover;
-    
-}
-
-#frioul figcaption{
-    background-color: white;
-    height: 35px;
-    position: relative;
-    top: 86px;
-    border-radius: 0 0 25px 25px;
 }
 
 #calanques{
     background-image: url("images/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
-    background-position-x: -150px;
+    background-position-y: -100px;
+    background-size: cover;
 }
 
 
 #garde{
     background-image: url("images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg");
-    height: 45%;
+    
     background-size: cover;
 }
 
-#garde figcaption, #longchamp figcaption{
-    background-color: white;
-    height: 35px;
-    position: relative;
-    top: 154px;
-    border-radius: 0 0 25px 25px;
-}
+
 
 #longchamp{
     background-image: url("images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
-    height: 45%;
+    
     background-size: cover;
 }
 
-
-
-  
-
 /**************footer**********/
 footer{
-    display: flex;
+   
     background-color: #F2F2F2; 
     margin-top: 70px;
+    padding-top: 50px
 }
 
 footer h3{
@@ -616,7 +510,8 @@ footer h3{
 }
 
 footer div{
-    margin: 52px 150px 0 70px;
+    width: 80%;
+    margin: auto;
 }
 
 footer ul{
