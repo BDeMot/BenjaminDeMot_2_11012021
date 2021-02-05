@@ -1,6 +1,7 @@
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
+    min-width: 580px;
 }
 
 #wrapper{ 
@@ -44,6 +45,10 @@ h1, h2{
     #activites figcaption{
         font-size: .8em;
     }
+
+    footer div{
+        margin: 52px 0 0 40px;
+    }
 }
 
 
@@ -73,6 +78,10 @@ h1, h2{
 
     #activites figcaption{
         font-size: 1.17em;
+    }
+
+    footer div{
+        margin: 52px 150px 0 70px;
     }
     
 }
@@ -609,15 +618,14 @@ footer{
     display: flex;
     background-color: #F2F2F2; 
     margin-top: 70px;
+
 }
 
 footer h3{
     margin: 0;
 }
 
-footer div{
-    margin: 52px 150px 0 70px;
-}
+
 
 footer ul{
     padding: 0;
