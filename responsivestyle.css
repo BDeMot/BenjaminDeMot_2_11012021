@@ -5,9 +5,14 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  
 }
 
-
+#wrapper{
+   width: 100%;
+    overflow: hidden;
+    min-width: 280px;
+}
 
 /**********header********/
 #logo{
@@ -60,7 +65,7 @@ nav li:last-child{
     border: none;
     position: absolute;
     top: 25px;
-    left: 45%;
+    margin-left: 170px;
     text-align: end;
 }
 
@@ -250,6 +255,7 @@ section h1{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: auto;
     
     
 }
@@ -281,7 +287,7 @@ section h1{
 /*cards section principale*/
 
 .cards{
-    width: 100%;
+    width: 94%;
     height: 210px;
     border-radius: 15px;
     background-size: cover;
@@ -293,7 +299,7 @@ section h1{
 
 .imgcaption{
     height: 30%;
-    width: 342px;
+    width: 96%;
     justify-content: end;
     background-color: white;
     position: relative;
