@@ -1,7 +1,7 @@
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    font-size: 35px;
+    font-size: 17px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -9,11 +9,11 @@ body{
 
 
 
-
+/**********header********/
 #logo{
-    height: 110px;
-    margin-left: 50px;
-    margin-top: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 25px;
 }
 
 
@@ -27,19 +27,19 @@ header ul{
     flex-flow: row;
     flex-wrap: wrap;
     align-content: stretch;
-    margin: 0 0 100px 0;
+    margin: 0;
     padding: 0;
     height: 90px;
 }
 
 header ul li{
     list-style-type: none;
-    border-bottom : 8px solid lightgrey;
-    line-height: 90px;
+    border-bottom : 4px solid lightgrey;
     width: 50%;
     text-align: center;
     cursor: pointer;
     margin-top: 20px;
+    height: 40px;
 }
 
 header ul li a{
@@ -49,7 +49,7 @@ header ul li a{
 }
 
 nav li:hover  {
-    border-bottom: 8px solid #0065FC;
+    border-bottom: 4px solid #0065FC;
 }
 
 nav li:hover a{
@@ -59,7 +59,7 @@ nav li:hover a{
 nav li:last-child{
     border: none;
     position: absolute;
-    top: 50px;
+    top: 25px;
     left: 45%;
     text-align: end;
 }
@@ -71,55 +71,52 @@ header li:last-child a {
 
 /******************/
 section{
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 
-h1{
-    font-size: 50px;
+section h1{
+    margin-top: 5px;
 }
 
-p{
-    font-size: 33px;
-}
 
  /*************recherche**********/
 
  #recherche{
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top:35px;
   }
   
 #searchicon{
-    border-radius: 25px 0 0 25px;
+    border-radius: 15px 0 0 15px;
     background-color: #F2F2F2;
-    height: 130px;
-    width: 15%;    
+    height: 55px;
+    width: 15%; 
+     
   }
 
 
 #recherche img{
-      height: 50px;
+      height: 20px;
       position: relative;
-      left: 50px;
-      top: 30px;
+      left: 20px;
+      top: 17px;
+     overflow: visible;  
   }
   
 #searchbtn{
       display: inline-block;
-      height: 130px;
+      height: 55px;
       width: 15%;
       background-color: #0065FC;
       color: white;
       border : none;
-      border-radius : 25px 25px 25px 25px;
+      border-radius : 15px 15px 15px 15px;
       cursor : pointer;
-      font-size: 16px;
-      font-family: 'Raleway', sans-serif;
-      padding: 0;
       position: relative;
       right: 17px;
+      font-size: 7px;
      }
   
 #searchbtn span{
@@ -127,16 +124,18 @@ p{
 }
   
 #searchtext{
-      height: 130px;
+      height: 55px;
       width: 70%;
-      padding: 0 0 0 35px;
-      border: 3px solid #F2F2F2;
-      font-size: 45px;
+      padding: 0 0 0 15px;
+      border: 1px solid #F2F2F2;
+     
   }
 
 
+
+
 #searchtext::placeholder{
-    font-size: 45px;
+    font-size: 20px;
     color: black;
     font-weight: bold;
 }
@@ -148,11 +147,11 @@ p{
     flex-flow: column;
     align-items: baseline;
     font-weight: bolder;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 #divfilters label{
-    font-size: 45px;
+   font-size: 20px;
 }
 #listfilters{
     display: flex;
@@ -162,20 +161,19 @@ p{
     padding: 0;
     height: 100%;
     list-style-type: none;
-    margin: 32px 0 42px 0;
+    margin: 25px 0 13px 0;
 }
 
 .filter{
-    height: 100px;
-    border: 6px solid #F2F2F2;
-    border-radius:  100px;
+    height: 50px;
+    border: 2px solid #F2F2F2;
+    border-radius:  50px;
     text-align: center;
-    line-height: 100px;
+    line-height: 50px;
     cursor: pointer;
-    padding-left: 23px;
-    padding-right: 23px;
-    margin-top : 50px;
-    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom : 10px;
     
 }
 
@@ -187,12 +185,13 @@ p{
 
 .filterlogo{
    display: inline-block;
-    width : 101px;
-    height: 101px;
+    width : 52px;
+    height: 52px;
     border-radius : 50% 50%;
     background-color:  #DEEBFF;
     position: relative;
-    right: 24px;
+    right: 11px;
+    bottom: 1px;
     
 }
 
@@ -215,24 +214,24 @@ p{
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    margin-bottom: 42px;
+    
 }
 
 .fa-info{
-    border: 2px solid lightgrey;
+    border: 1px solid lightgrey;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 28px;
+    height: 22px;
     position: relative;
-    bottom: 5px;
+    bottom: 3px;
     color: #0065FC;
     margin-right: 5px;
 }
 
 .fa-info::before{
   position: relative;
-  top:5px;
-  left: 16px;
+  left: 8px;
+  font-size: 12px;
   
 }
 
@@ -257,7 +256,7 @@ p{
 
 #sectionPrincipale h2{
     width: 93%;
-    margin: 45px 0 0 0;
+    margin: 45px 0 20px 0;
 }
 
 
@@ -268,13 +267,14 @@ p{
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    margin: 50px 0 50px 0;
+    margin: 25px 0 0 0;
+    padding-bottom: 30px;
 
 }
 
 #affichezplus{
-    width: 80%;
-    margin: 40px 0 50px 0;
+   font-size: 20px;
+    margin: 20px 0 30px 0;
 }
 
 
@@ -282,35 +282,43 @@ p{
 
 .cards{
     width: 100%;
-    height: 360px;
-    border-radius: 25px;
+    height: 210px;
+    border-radius: 15px;
     background-size: cover;
-    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2);
     margin: auto;
-    border: 10px solid white;
-    margin-bottom: 50px;
+    border: 6px solid white;
+    margin-bottom: 10px;
 }
 
 .imgcaption{
-    height: 44%;
-    width: 100%;
+    height: 30%;
+    width: 342px;
     justify-content: end;
     background-color: white;
     position: relative;
-    top: 210px;
-    border-radius: 0 0 23px 23px;
+    top: 130px;
+    right: 3px;
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
 }
 
 .imgcaption p{
     margin:0;
    line-height: 1.5em;
+   font-size: 15px;
 }
 
 .imgcaption h3{
     margin:0;
+    font-size: 17px;
 }
 .cards i{
-    height: 10px;
+   
+    font-size: 12px;
+    letter-spacing: -4px;
+    
+
 }
 
 .blue{
@@ -326,33 +334,33 @@ p{
 
 #cannebiere{
     background-image: url("images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-    background-position: -40px -170px; 
+    background-position-y: -50px; 
 }
 
 #port{
     background-image: url('images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
-    background-position: 15px -180px;
+    background-position-y: -50px;
     
 }
 
 #mouettes{
     background-image: url("images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-    background-position-y: -200px;
+    background-position-y: -50px;
 }
 
 #mer{
     background-image: url("images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-    background-position-y: -280px;
+    background-position-y: -100px;
 }
 
 #panier{
     background-image: url("images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-    background-position-y: -130px;
+    background-position-y: -30px;
 }
 
 #amina{
     background-image: url("images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-    background-position-y: -520px;
+    background-position-y: -200px;
 }
 
 
@@ -362,7 +370,7 @@ p{
     justify-content: space-between;
     width: 80%;
     align-items: baseline;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #headeraside h2{
@@ -372,18 +380,33 @@ p{
 
 .asidecards{
     width: 80%;
-    height: 360px;
+    height: 150px;
     margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2);
     border-radius: 25px;
-    border : 10px solid white;
+    border : 6px solid white;
     background-size: cover;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    
+
+}
+
+.asidecards p{
+    margin: 0;
+    font-size: 15px;
+}
+
+.asidecards i{
+    font-size: 12px;
+    position: relative;
+    top: 30px;
+    letter-spacing: -4px;
+
 }
 
 .caption{
     background-color: white;
-    height: 330px;
+    height: 120px;
     width: 50%;
     float: right;
     border-radius: 0px 25px 25px 0;
@@ -394,7 +417,8 @@ p{
 }
 
 .caption h3{
-    margin: 0 0 10px 0;
+   margin: 0;
+   font-size: 17px;
 }
 
 #matin{
@@ -411,8 +435,8 @@ p{
 
 #bleu{
     background-image: url("images/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-    background-size: 355px;
-    background-position-y: -20px;
+    background-size: 150px;
+    background-position-y: -30px;
 
 }
 
@@ -423,16 +447,16 @@ p{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 figure{
     width: 100%;
-    height: 450px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2), 0 6px 20px 0 rgba(137, 137, 137, 0.19);
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2);
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #activites h2{
@@ -443,15 +467,13 @@ figure{
 
 #activites figcaption{
     background-color: white;
-    height: 100px;
-    width: 96.25%;
+    height: 40px;
     position: relative;
-    top: 322px;
-    right: 1px;
-    border-radius: 0 0 25px 25px;
+    top: 142px;
+    border-radius: 0 0 15px 15px;
     margin: 0;
-    padding: 32px 0 0 32px;
-    font-size: 1.17em;
+    padding: 20px 0 0 20px;
+    font-size: 17px;
     font-weight: bold;
 }
 
@@ -464,28 +486,27 @@ figure{
 
 #pomegues{
     background-image: url("images/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
-    background-size: cover;
-    background-position-y: -430px;
+    background-position-y: -170px;
 }
 
 
 
 #frioul{
     background-image: url("images/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
-    background-position-y: -58px;
+    background-position-y: -15px;
     background-size: cover;
 }
 
 #calanques{
     background-image: url("images/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
-    background-position-y: -100px;
+    background-position-y: -20px;
     background-size: cover;
 }
 
 
 #garde{
     background-image: url("images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg");
-    
+    background-position-y: -15px;
     background-size: cover;
 }
 
@@ -493,7 +514,7 @@ figure{
 
 #longchamp{
     background-image: url("images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
-    
+    background-position-y: -30px;
     background-size: cover;
 }
 
@@ -502,11 +523,10 @@ footer{
    
     background-color: #F2F2F2; 
     margin-top: 70px;
-    padding-top: 50px
 }
 
 footer h3{
-    margin: 0;
+    margin: 50px 0 0 0;
 }
 
 footer div{
