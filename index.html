@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8"/>
         <title>Reservia, trouvez votre hebergement pour des vacances de rêves</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;800&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" media="all and (min-width: 480px)" href="style.css"/>
+        <link rel="stylesheet" media="all and (max-width: 480px)" href="responsivestyle.css">
         <script src="https://kit.fontawesome.com/cbb784483b.js" crossorigin="anonymous"></script>
     </head>
 
@@ -23,6 +25,7 @@
                     </ul>
                 </nav>
             </header>
+             
 
             <section>
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -35,7 +38,7 @@
                     </span>
                     <input type="search" id="searchtext" name="" placeholder="Marseille, France">
                     <button id="searchbtn">
-                        <span >Rechercher</span>
+                        <span >Rechercher</span><i class="fas fa-search fa-3x"></i>
                     </button>
                 </div>
 
@@ -84,7 +87,7 @@
                 </div>
 
             </section>
-               
+  
     
 
             <main id="hebergements">
@@ -196,7 +199,8 @@
 
                     <article class="asidecards"id="eau">
                            <div class="caption">
-                               <h3>Au coeur de l'eau <br> Chambre d'hôtes</h3>
+                               <h3 class="textEllipsis">Au coeur de l'eau </h3>
+                               <h3 class="textEllipsis">Chambre d'hôtes</h3>
                                <p>Nuit à partir de 71€</p>
                             <br>
                             <i class="fas fa-star blue fa-sm"></i>
@@ -223,7 +227,7 @@
                 </aside>
 
             </main>
-
+          
             <section id="activites">
                 <h2> Activités à Marseille</h2>
             
@@ -288,5 +292,4 @@
 
         </footer>
     </body>
-</html>
-
+</html>   
