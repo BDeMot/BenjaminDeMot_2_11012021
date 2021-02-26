@@ -180,10 +180,15 @@ section h1{
     text-align: center;
     line-height: 50px;
     cursor: pointer;
-    padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 10px;
     margin-bottom : 10px;
-    
+}
+
+@media all and (max-width: 370px){
+    .filter{
+        font-size: 13px;
+        padding-right: 7px;
+    }
 }
 
 #cbfilter{
