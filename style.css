@@ -1,3 +1,5 @@
+@media only screen and (min-width: 480px){
+
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -643,4 +645,6 @@ footer a{
 
 footer a:hover{
     color : #0065FC;
+}
+
 }
