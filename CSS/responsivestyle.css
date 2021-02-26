@@ -191,7 +191,7 @@ section h1{
 @media all and (max-width: 370px){
     .filter{
         font-size: 13px;
-        padding-right: 7px;
+        padding-right: 5px;
     }
 }
 
